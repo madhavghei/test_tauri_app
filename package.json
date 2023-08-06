@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@tauri-apps/api": "^1.4.0"
+		"@tauri-apps/api": "^1.4.0",
+		"yarn": "^1.22.19"
 	}
 }

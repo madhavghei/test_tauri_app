@@ -1,8 +1,8 @@
-<script>
-    import { invoke } from '@tauri-apps/api/tauri'
+<script lang="ts">
+	import { invoke } from '@tauri-apps/api/tauri';
 
-    let name = ''
-    let greetMsg = ''
+	let name: string;
+	let greetMsg: string;
 
     async function greet() {
         greetMsg = await invoke('greet', { name })
@@ -11,6 +11,6 @@
 
 <div>
     <input id="greet-input" bind:value={name} placeholder="Enter a name..."/>
-    <button on:click={greet}>Greet</button>
-    <p>{greetMsg}</p>
+	<button on:click={greet}>Greet</button>
+	<p>{greetMsg}</p>
 </div>
